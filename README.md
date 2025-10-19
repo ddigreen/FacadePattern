@@ -23,36 +23,4 @@ java FacadeDemo
 
 ## PlantUML
 
-```plantuml
-@startuml
-class ShopFacade {
-  +placeOrder(order: Order): boolean
-  +cancelOrder(order: Order): void
-}
-
-class InventoryService
-class PricingService
-class PaymentService
-class ShippingService
-class NotificationService
-
-class Order {
-  -orderId: String
-  -sku: String
-  -quantity: int
-  -customerEmail: String
-  -address: String
-  -reserved: boolean
-  -paid: boolean
-  -shipmentId: String
-}
-
-ShopFacade --> InventoryService
-ShopFacade --> PricingService
-ShopFacade --> PaymentService
-ShopFacade --> ShippingService
-ShopFacade --> NotificationService
-ShopFacade --> Order
-
-@enduml
-```
+![Facade Pattern Diagram](images/uml.png)
